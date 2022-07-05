@@ -13,5 +13,6 @@ jobs:
           fetch-depth: 0
       - run: echo ${{ github.sha }}
       - run: echo ${{ github.base_ref }}
+      - run: echo `git show-ref ${{ github.base_ref }} --verify`
       - run: |
           git log ${{ github.base_ref }}...${{ github.sha }}
