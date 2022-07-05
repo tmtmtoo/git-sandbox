@@ -12,6 +12,6 @@ jobs:
         with:
           fetch-depth: 0
       - run: echo ${{ github.sha }}
-      - run: echo ${{ github }}
+      - run: echo ${{ github.base_ref }}
       - run: |
-          git log remotes/origin/main...${{ github.sha }}
+          git log ${{ github.base_ref }}...${{ github.sha }}
