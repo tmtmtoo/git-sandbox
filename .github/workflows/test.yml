@@ -10,5 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-        git fetch origin/main
-        git log origin/main...HEAD
+          git fetch origin/main
+          git log origin/main...HEAD
