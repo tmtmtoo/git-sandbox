@@ -11,5 +11,6 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - run: echo ${{ github.event.inputs.ref }}
       - run: |
-          git log remotes/origin/main...HEAD
+          git log remotes/origin/main...${{ github.event.inputs.ref }}
