@@ -14,6 +14,6 @@ jobs:
       - run: echo '${{ toJSON(github) }}'
       - run: echo ${{ github.sha }}
       - run: echo ${{ github.base_ref }}
-      - run: echo `git show-ref ${{ github.base_ref }} --verify`
+      - run: echo ${{ github.event.pull_request.head.sha }}
       - run: |
           git log ${{ github.base_ref }}...${{ github.sha }}
