@@ -12,5 +12,4 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          git fetch origin/main
-          git log origin/main...HEAD
+          git branch -a
