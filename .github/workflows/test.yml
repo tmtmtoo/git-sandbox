@@ -10,5 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 1 
+          fetch-depth: 0
       - run: git log ${{ github.event.pull_request.base.sha }}...${{ github.sha }} --pretty=format:"%H,%cd" --date=unix
